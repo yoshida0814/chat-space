@@ -37,7 +37,7 @@ belongs_to :group
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|string|null: false|
 ### Association
  has_many :chats
  has_many :group_users
