@@ -46,11 +46,11 @@
 
 
   .content__right__bottom
-    %form.content__right__bottom__box{"accept-charset" => "UTF-8", :action => "/groups/3423/messages", :enctype => "multipart/form-data", :method => "post"}
+    %form.content__right__bottom__box{"accept-charset" => "UTF-8", action:  "/groups/3423/messages", enctype: "multipart/form-data", method: "post"}
       .content__right__bottom__box__placeholder
-        %input.content__right__bottom__box__placeholder__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-        %label.content__right__bottom__box__placeholder__image{:for => "message_image"}
+        %input.content__right__bottom__box__placeholder__text{name:"message[content]", placeholder: "type a message", type: "text"}/
+        %label.content__right__bottom__box__placeholder__image{for: "message_image"}
           %i.fa.fa-image
-          %input.content__right__bottom__box_placeholder__image__file{id: "message_image", :name => "message[image]", :type => "file"}/
-      %input.content__right__bottom__box__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+          %input.content__right__bottom__box_placeholder__image__file{id: "message_image", name: "message[image]", type: "file"}/
+      %input.content__right__bottom__box__submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
 
