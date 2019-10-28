@@ -1,0 +1,56 @@
+.header
+  .header__logo
+    グループを作成しました
+
+.content__left  
+  .content__left__top
+    .content__left__top__text
+      .content__left__top__text__left test-page
+      .content__left__top__text__right 
+        %ul
+          %li1 
+          = fa_icon 'edit'
+          %li2
+          = fa_icon 'cog'
+  .content__left__bottom
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    
+.content__right
+  .content__right__top
+    .content__right__top__box
+      .content__right__top__box__left  text
+      .content__right__top__box__right  Edit
+    .content__right__top__under 
+      %ul
+        %li1 メンバー： 
+        %li2 吉田
+        %li3 田中
+        %li4 岩﨑
+        
+  .content__right__center
+    = render "data"
+    = render "data" 
+    = render "data"
+    = render "data"
+    = render "data"
+    = render "data" 
+    = render "data" 
+
+
+  .content__right__bottom
+    %form.content__right__bottom__box{"accept-charset" => "UTF-8", :action => "/groups/3423/messages", :enctype => "multipart/form-data", :method => "post"}
+      .content__right__bottom__box__placeholder
+        %input.content__right__bottom__box__placeholder__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %label.content__right__bottom__box__placeholder__image{:for => "message_image"}
+          %i.fa.fa-image
+          %input.content__right__bottom__box_placeholder__image__file{id: "message_image", :name => "message[image]", :type => "file"}/
+      %input.content__right__bottom__box__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
