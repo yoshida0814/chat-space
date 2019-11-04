@@ -37,10 +37,9 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(data){
-     
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val(''); //input内のメッセージを消しています。
+      $('.new_message')[0].reset(); //input内のメッセージを消しています。
       $('.content__right__center').animate({scrollTop: $('.content__right__center')[0].scrollHeight}, 'fast');
 
     })
