@@ -23,15 +23,20 @@
       font-weight: bold;
       &__text{
         display: flex;
-        line-height: 100px;
+        line-height: 100px; 
+        justify-content: space-between;
         &__left{
         }
         &__right{
           color: brown;
-          padding-left: 140px;
+          padding-left: 80px;
             & ul{
               color: #ffffff;
-        }
+              .icon{
+                  color: white;
+              }
+
+            }
         }
      }    
   }
@@ -44,14 +49,18 @@
       top: 0;
       bottom: 0;
       overflow-y: auto;
-        &__group1{
+        &__group{
+          color: #ffffff;
           margin-bottom: 40px;
-          &__text1{
+          &__name{
+            color: #ffffff;
             margin-bottom: 5px;
             font-size: 15px;
             font-weight: bold;
           }
-          &__text2{
+          &__message{
+          　text-decoration:none;
+            color: #ffffff;
             font-size: 11px;
             font-weight: bold;
           }
@@ -70,7 +79,6 @@
       height: 100px;
       border-bottom: solid 1px #eeeeee;
         &__box{
-         
           display: flex;
           justify-content: space-between;
           &__left{
@@ -86,24 +94,19 @@
             border:solid 1px #38AEF0;
             padding: 0 20px;
             margin-right: 20px;
+            
           } 
         }
-          
         &__under{
           padding-top: 15px;
           color:#999999;
           font-size: 12px;
-            & ul{
-              display: flex;
-                & li1{ }
-                & li2{ }
-                & li3{
-                margin-left:0.3rem;
-               }
-                & li4{
-                margin-left:0.3rem;
-               }
-            }
+          display: flex;
+          list-style: none;
+          .member{
+            padding-left: 10px;
+
+          }
         }      
      }
     &__center{
@@ -136,57 +139,47 @@
       }
     }
 
-    &__bottom{
+    .form{
       height: 70px;
       padding: 20px 40px;
       background-color: #ddd;
-        &__box{  
-        display: flex;
-          &__placeholder{
+      .new_message{
+        display: flex; 
+      }
+        &__message{ 
           color: #434A54;
           height: 50px;
           line-height: 50px;
           background-color: #fff;
           position: relative;
-          width: 90%;
-            &__text{
-              height: 50px;
-              width: 90%;
-              padding: 0 40px 0 10px;
-              color: #434a54;
-              border-style: none;
-              
-            }
-            &__image{
-              font-size: 1.3rem;
-              position: absolute;
-              right: 10px;
-              cursor: pointer;
-            
-              input {
-                display: none;
-                font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                
-              }
-            
-           }
-
-          }
-          &__submit-btn{
-            width: 100px;
-            height: 50px;
-            padding: 0 30px;
-            margin-left: 15px;
-            background-color: #38aef0;
-            color: white;
-          }
-         
+          width: 87%;
+        
         }
-    }
- }
+        &__mask{
+          &__image{
+            font-size: 1.3rem;
+            position: absolute;
+            right: 200px;
+            bottom: 6px;
+            cursor: pointer;
+            .icon{
+
+            }
+            .hidden{
+              display: none;
+            }
+          }
+        }
+        &__submit{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+        }
+   } 
+} 
 
 
 
