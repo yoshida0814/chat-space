@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message) {
-    console.log(message)
     var content = message.content ? `${ message.content }` : "";
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
     var html = `<div class="message" data-message-id="${message.id}">
@@ -28,8 +27,6 @@ $(document).on('turbolinks:load', function(){
     e.preventDefault();
     var message = new FormData(this);
     var url = (window.location.href);
-    // var url = $(this).attr('action')
-    // console.log(url)
     $.ajax({  
       url: url,
       type: 'POST',
@@ -67,7 +64,6 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(messages) {
       //追加するHTMLの入れ物を作る
-      console.log(messages)
       var insertHTML = '';
       messages.forEach(function(message) {
         insertHTML = buildHTML(message);
