@@ -77,7 +77,7 @@ $(document).on('turbolinks:load', function(){
       //メッセージを追加
     })
     .fail(function() {
-
+      alert('エラーが発生したためメッセージは送信できませんでした。');
     });
     
   };

@@ -55,7 +55,6 @@ $(document).on('turbolinks:load', function(){
       });
   });
   $("#user-search-result").on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).data("user-name");
     const userId = $(this).data("user-id");
     $(this)
