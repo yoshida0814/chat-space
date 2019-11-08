@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
-    var html = `<div class="message" data-message-id="${message.id}">
+    var html = `<div class="message" data-message-id ="${message.id}">
                   <div class="upper-message">
                     <p class="upper-message__user-name">
                       ${message.user_name}
@@ -36,6 +36,7 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(data){
+      console.log('aa')
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.new_message')[0].reset(); //input内のメッセージを消しています。
@@ -46,7 +47,7 @@ $(document).on('turbolinks:load', function(){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
     .always(function(data){
-      $('input').prop('disabled', false);　//ここで解除して
+      $('input').prop('disabled', false);//ここで解除して
     })
   })
 
@@ -83,5 +84,5 @@ $(document).on('turbolinks:load', function(){
   }
     
   };
-  setInterval(reloadMessages, 1000);
+  setInterval(reloadMessages, 7000);
 });
