@@ -3,16 +3,16 @@ $(document).on('turbolinks:load', function(){
     var content = message.content ? `${ message.content }` : "";
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
     var html = `<div class="message" data-message-id="${message.id}">
-                  <div class="message__detail">
-                    <p class="message__detail__current-user-name">
+                  <div class="upper-message">
+                    <p class="upper-message__user-name">
                       ${message.user_name}
                     </p>
-                    <p class="message__detail__date">
+                    <p class="upper-message__date">
                       ${message.created_at}
                     </p>
                   </div>
                   <p class="message_body">
-                    <div>
+                    <div class = "lower-message">
                     ${content}
                     </div>
                     ${img}
@@ -50,7 +50,7 @@ $(document).on('turbolinks:load', function(){
     })
   })
 
- 　　 var reloadMessages = function() {
+  var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id =  $('.message:last').data("message-id");
     if ( window.location.href .match(/\/groups\/\d+\/messages/)) {
