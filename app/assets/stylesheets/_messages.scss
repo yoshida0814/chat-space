@@ -156,13 +156,13 @@
       background-color: #ddd;
       .new_message{
         display: flex; 
+        position: relative;
       }
         &__message{ 
           color: #434A54;
           height: 50px;
           line-height: 50px;
           background-color: #fff;
-          position: relative;
           width: 87%;
         
         }
@@ -170,8 +170,8 @@
           &__image{
             font-size: 1.3rem;
             position: absolute;
-            right: 200px;
-            bottom: 25px;
+            right: 150px;
+            bottom: 18px;
             cursor: pointer;
             .icon{
 
